@@ -16,7 +16,9 @@ This command creates a new file: /src/boot/<name>.js with the following content:
   
   
 // "async" is optional
+
 // store --- Use to store status value and reuse elsewhere in project
+
 export default async ({ store }) => {  
   
  document.addEventListener('deviceready', () => {
@@ -27,12 +29,14 @@ export default async ({ store }) => {
 //Various APIs like playing media or tracking GPS position in background might not work while in background even the background mode is //active. To fix such issues the plugin provides a method to disable most optimizations done by Android/CrossWalk.
 
   cordova.plugins.backgroundMode.on('activate', () => {
+
     alert('App Background on');         
     store.commit('increment_screen');
         
   });
         
   cordova.plugins.backgroundMode.on('deactivate', () => {
+
     alert('App Background off');
     store.commit('increment_screen');
 
