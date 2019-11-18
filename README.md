@@ -18,9 +18,11 @@ This command creates a new file: /src/boot/.js with the following content:
 
 In the quasar.conf.js file add:
 
+
 boot: [
 
-'file-name'
+ 'file-name'
+
      ],
 
 In the boot file that was generated add the code below:
