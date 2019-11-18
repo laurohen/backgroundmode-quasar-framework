@@ -23,7 +23,7 @@ boot: [
 
  'file-name'
 
-     ],
+],
 
 In the boot file that was generated add the code below:
 
