@@ -36,22 +36,23 @@ export default async ({ store }) => {
   
  document.addEventListener('deviceready', () => {
 
-  cordova.plugins.backgroundMode.enable();
+ cordova.plugins.backgroundMode.enable();
   
 // -------------- Quirks ------------
+
 //Various APIs like playing media or tracking GPS position in background might not work while in background even the background mode is //active. To fix such issues the plugin provides a method to disable most optimizations done by Android/CrossWalk.
 
   cordova.plugins.backgroundMode.on('activate', () => {
 
-    alert('App Background on');         
-    store.commit('increment_screen');
+   alert('App Background on');         
+   store.commit('increment_screen');
         
   });
         
   cordova.plugins.backgroundMode.on('deactivate', () => {
 
-    alert('App Background off');
-    store.commit('increment_screen');
+   alert('App Background off');
+   store.commit('increment_screen');
 
   });  
  
