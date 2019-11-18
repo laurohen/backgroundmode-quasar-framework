@@ -5,12 +5,12 @@ Check App Background Status in Projects Using Quasar Framework
 The plugin can be installed via Cordova-CLI and is publicly available on NPM.
 Execute from the projects root folder:
 
-$ cordova plugin add cordova-plugin-background-mode
+ $ cordova plugin add cordova-plugin-background-mode
 
 
 The first step is always to generate a new plugin using Quasar CLI:
 
-$ quasar new boot 'file-name'
+ $ quasar new boot 'file-name'
 
 Where 'file-name' should be exchanged by a suitable name for your boot file.
 
