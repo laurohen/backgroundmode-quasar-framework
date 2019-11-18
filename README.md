@@ -7,14 +7,25 @@ Execute from the projects root folder:
 
 $ cordova plugin add cordova-plugin-background-mode
 
-first step is always to generate a new plugin using Quasar CLI:
 
-$ quasar new boot <name>
-Where <name> should be exchanged by a suitable name for your boot file.
+The first step is always to generate a new plugin using Quasar CLI:
 
-This command creates a new file: /src/boot/<name>.js with the following content:
-  
-  
+$ quasar new boot 'file-name'
+
+Where 'file-name' should be exchanged by a suitable name for your boot file.
+
+This command creates a new file: /src/boot/.js with the following content:
+
+In the quasar.conf.js file add:
+
+boot: [
+
+'file-name'
+     ],
+
+In the boot file that was generated add the code below:
+
+
 // "async" is optional
 
 // store --- Use to store status value and reuse elsewhere in project
